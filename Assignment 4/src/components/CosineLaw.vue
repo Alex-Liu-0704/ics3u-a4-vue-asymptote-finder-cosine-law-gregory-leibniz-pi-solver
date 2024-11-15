@@ -5,10 +5,12 @@ const a = ref(0);
 const b = ref(0);
 const angleC = ref(0);
 const c = ref(0);
+const cResult = ref(0);
 
 function cosineLaw() {
     if (angleC.value < 180 && a.value > 0 && b.value > 0) {
         c.value = Math.sqrt((a.value ** 2) + (b.value ** 2) - (2 * a.value * b.value * Math.cos(angleC.value * (Math.PI / 180))));
+        cResult.value = c.value.toFixed(5);
     }
 }
 </script>
@@ -23,7 +25,7 @@ function cosineLaw() {
             <label>Angle C:</label>
             <input type="number" v-model="angleC" /><br>
             <label>Side c (Result):</label>
-            <input v-model="c" type="number" readonly /><br>
+            <input v-model="cResult" type="number" readonly /><br>
             <button type="submit">Calculate</button>
     </form>
 </template>
