@@ -8,8 +8,8 @@ const cResult = ref(0);
 
 function cosineLaw() {
   if (angleC.value < 180 && a.value > 0 && b.value > 0) {
-      const c = Math.sqrt(Math.pow(a.value, 2) + Math.pow(b.value, 2) - (2 * a.value * b.value * Math.cos(angleC.value * (Math.PI / 180))));
-      cResult.value = c.toFixed(5);
+    const c = Math.sqrt(Math.pow(a.value, 2) + Math.pow(b.value, 2) - (2 * a.value * b.value * Math.cos(angleC.value * (Math.PI / 180))));
+    cResult.value = c.toFixed(5);
   }
 }
 </script>
