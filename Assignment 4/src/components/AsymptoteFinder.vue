@@ -10,17 +10,14 @@ function asymptoteFinder() {
         asymptoteType.value = "The asymptote is horizontal";
     } else if (n.value > m.value) {
         asymptoteType.value = "The asymptote is the x-axis";
-    } else {
+    } else if ((m.value - n.value) <= 10) {
         const differences = [
-            "Linear", "Quadratic", "Cubic", "Quartic", "Quintic", "Sextic", "Septic", "Octic", "Nonic", "Decic"
-        ]
-        if ((m.value - n.value) <= 10) {
-            asymptoteType.value = "The asymptote is " + differences[m.value - n.value - 1];
-        } else {
-            asymptoteType.value = "The asymptote out of range";
-        }
+            "Linear", "Quadratic", "Cubic", "Quartic", "Quintic", "Sextic", "Septic", "Octic", "Nonic", "Decic" ];
+        asymptoteType.value = "The asymptote is " + differences[m.value - n.value - 1];
+    } else {
+        asymptoteType.value = "The asymptote out of range";
     }
-}
+  }
 </script>
 
 <template>

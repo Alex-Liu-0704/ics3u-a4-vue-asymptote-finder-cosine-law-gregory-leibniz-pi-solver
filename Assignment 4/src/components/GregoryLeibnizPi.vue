@@ -7,7 +7,7 @@ const piApprox = ref(0);
 function piApproximation() {
     let pi = 0;
     for (let i = 0; i < n.value; i++) {
-        pi += ((-1) ** i) / (2 * i + 1);
+        pi += (Math.pow((-1), i)) / (2 * i + 1);
     }
     piApprox.value = (pi * 4);
 }
