@@ -5,10 +5,10 @@ import GregoryLeibnizPi from "./components/GregoryLeibnizPi.vue";
 </script>
 
 <template>
-    <div class="calculator-container">
-        <CosineLaw />
-        <AsymptoteFinder />
-        <GregoryLeibnizPi />
+  <div class="calculator-container">
+    <CosineLaw />
+    <AsymptoteFinder />
+    <GregoryLeibnizPi />
   </div>
 </template>
 
