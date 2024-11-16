@@ -18,13 +18,13 @@ function cosineLaw() {
     <form @submit.prevent="cosineLaw()">
         <p>Cosine Law</p>
         <label>Side a:</label>
-        <input type="number" v-model="a" /><br>
+        <input type="number" v-model="a" /><br />
         <label>Side b:</label>
-        <input type="number" v-model="b" /><br>
+        <input type="number" v-model="b" /><br />
         <label>Angle C:</label>
-        <input type="number" v-model="angleC" /><br>
+        <input type="number" v-model="angleC" /><br />
         <label>Side c (Result):</label>
-        <input v-model="cResult" type="number" readonly /><br>
+        <input v-model="cResult" type="number" readonly /><br />
         <button type="submit">Calculate</button>
     </form>
 </template>

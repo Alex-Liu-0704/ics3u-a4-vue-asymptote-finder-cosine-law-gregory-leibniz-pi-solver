@@ -17,9 +17,9 @@ function piApproximation() {
     <form @submit.prevent="piApproximation()">
         <p>Gregory–Leibniz Pi Approximation</p>
         <label>n Value:</label>
-        <input type="number" v-model="n"><br>
+        <input type="number" v-model="n"><br />
         <label>Pi Approximation (Result):</label>
-        <input v-model="piApprox" type="number" readonly /><br>
+        <input v-model="piApprox" type="number" readonly /><br />
         <button type="submit">Calculate</button>
     </form>
 </template>

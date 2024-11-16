@@ -24,11 +24,11 @@ function asymptoteFinder() {
     <form @submit.prevent="asymptoteFinder()">
         <p>Asymptote Finder</p>
         <label>m Value:</label>
-        <input type="number" v-model="m" /><br>
+        <input type="number" v-model="m" /><br />
         <label>n Value:</label>
-        <input type="number" v-model="n" /><br>
+        <input type="number" v-model="n" /><br />
         <label>Asymptote Type (Result):</label>
-        <input type="text" v-model="asymptoteType" readonly /><br>
+        <input type="text" v-model="asymptoteType" readonly /><br />
         <button type="submit">Calculate</button>
     </form>
 </template>
