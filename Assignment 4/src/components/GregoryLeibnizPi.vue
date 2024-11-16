@@ -1,13 +1,13 @@
 <script setup>
 import { ref } from 'vue';
 
-const n = ref(0);
+const nValue = ref(0);
 const piApprox = ref(0);
 
 function piApproximation() {
   let pi = 0;
-  for (let i = 0; i < n.value; i++) {
-    pi += (Math.pow((-1), i)) / (2 * i + 1);
+  for (let i = 0; i < nValue.value; i++) {
+    pi += (Math.pow(-1, i)) / (2 * i + 1);
   }
   piApprox.value = (pi * 4);
 }
@@ -17,7 +17,7 @@ function piApproximation() {
   <form @submit.prevent="piApproximation()">
     <p>Gregory–Leibniz Pi Approximation</p>
     <label>n Value:</label>
-    <input type="number" v-model="n"><br />
+    <input type="number" v-model="nValue"><br />
     <label>Pi Approximation (Result):</label>
     <input v-model="piApprox" type="number" readonly /><br />
     <button type="submit">Calculate</button>

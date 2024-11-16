@@ -1,18 +1,18 @@
 <script setup>
 import { ref } from 'vue';
 
-const m = ref(0);
-const n = ref(0);
+const mValue = ref(0);
+const nValue = ref(0);
 const asymptoteType = ref("");
 
 function asymptoteFinder() {
-  if (m.value === n.value) {
+  if (mValue.value === nValue.value) {
     asymptoteType.value = "The asymptote is horizontal";
-  } else if (n.value > m.value) {
+  } else if (nValue.value > mValue.value) {
     asymptoteType.value = "The asymptote is the x-axis";
-  } else if ((m.value - n.value) <= 10) {
+  } else if ((mValue.value - nValue.value) <= 10) {
     const differences = ["Linear", "Quadratic", "Cubic", "Quartic", "Quintic", "Sextic", "Septic", "Octic", "Nonic", "Decic"];
-    asymptoteType.value = "The asymptote is " + differences[m.value - n.value - 1];
+    asymptoteType.value = "The asymptote is " + differences[mValue.value - nValue.value - 1];
   } else {
     asymptoteType.value = "The asymptote out of range";
   }
@@ -23,9 +23,9 @@ function asymptoteFinder() {
   <form @submit.prevent="asymptoteFinder()">
     <p>Asymptote Finder</p>
     <label>m Value:</label>
-    <input type="number" v-model="m" /><br />
+    <input type="number" v-model="mValue" /><br />
     <label>n Value:</label>
-    <input type="number" v-model="n" /><br />
+    <input type="number" v-model="nValue" /><br />
     <label>Asymptote Type (Result):</label>
     <input type="text" v-model="asymptoteType" readonly /><br />
     <button type="submit">Calculate</button>
