@@ -6,6 +6,7 @@ const piApprox = ref(0);
 
 function piApproximation() {
   let pi = 0;
+  
   for (let i = 0; i < nValue.value; i++) {
     pi += (Math.pow(-1, i)) / (2 * i + 1);
   }
